@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เวียดนามกลาง 22–25 พ.ค. 2569</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f5ede0;
+    --cream: #fdf8f2;
+    --terracotta: #c9603a;
+    --terracotta-light: #e07a55;
+    --deep: #2b1f14;
+    --warm-brown: #5c3d2e;
+    --gold: #d4a853;
+    --gold-light: #f0c96a;
+    --teal: #2a7c7c;
+    --teal-light: #3fa8a8;
+    --sage: #7a9a7a;
+    --muted: #8a7468;
+    --white: #ffffff;
+    --card-shadow: 0 2px 16px rgba(43,31,20,0.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--deep);
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: var(--deep);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 110%, rgba(201,96,58,0.45) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 20% 10%, rgba(212,168,83,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 0%, rgba(42,124,124,0.2) 0%, transparent 60%);
+  }
+
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      repeating-linear-gradient(45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 28px),
+      repeating-linear-gradient(-45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 28px);
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 10vw, 96px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.4s;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--terracotta-light);
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.6s;
+  }
+
+  .hero-dates {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.8s;
+  }
+
+  .date-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    padding: 9px 22px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 1.2s;
+  }
+  .hero-scroll span { font-size: 11px; letter-spacing: 2px; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+  /* ── OVERVIEW STRIP ── */
+  .overview {
+    background: var(--terracotta);
+    border-bottom: 3px solid rgba(0,0,0,0.12);
+  }
+
+  .overview-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .overview-item {
+    flex: 1 1 auto;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+  }
+  .overview-item:last-child { border-right: none; }
+
+  .ov-icon { font-size: 20px; flex-shrink: 0; }
+  .ov-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .ov-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 12px;
+  }
+  .section-label::before, .section-label::after {
+    content: '';
+    height: 1px;
+    width: 24px;
+    background: var(--terracotta);
+    opacity: 0.5;
+  }
+
+  /* ── TABS ── */
+  .days-section { padding: 40px 0 56px; }
+
+  .tabs-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream);
+    padding: 14px 0 0;
+    border-bottom: 2px solid var(--sand);
+    margin-bottom: 36px;
+  }
+
+  .tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tab-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 10px 8px 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s ease;
+    border-radius: 8px 8px 0 0;
+  }
+  .tab-btn:hover { background: rgba(201,96,58,0.04); }
+
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 2px;
+    background: transparent;
+    transition: background 0.2s ease;
+  }
+  .tab-btn.active { background: rgba(201,96,58,0.06); }
+  .tab-btn.active::after { background: var(--terracotta); }
+
+  .tab-day-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--muted);
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+  .tab-btn.active .tab-day-num { color: var(--terracotta); }
+
+  .tab-day-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.3;
+    transition: color 0.2s ease;
+  }
+  .tab-btn.active .tab-day-label { color: var(--terracotta); }
+
+  .tab-day-date {
+    font-size: 10px;
+    color: rgba(138,116,104,0.55);
+    letter-spacing: 0.2px;
+    text-align: center;
+  }
+  .tab-btn.active .tab-day-date { color: rgba(201,96,58,0.65); }
+
+  /* ── DAY PANEL ── */
+  .day-panel { display: none; }
+  .day-panel.active { display: block; animation: fadeIn 0.3s ease; }
+
+  .day-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+    padding: 22px 26px;
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: var(--card-shadow);
+  }
+
+  .day-panel-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--sand);
+    line-height: 1;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  .day-info { flex: 1; min-width: 0; }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+  .day-date {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--terracotta);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    padding-left: 72px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--terracotta), rgba(201,96,58,0.15) 90%);
+    border-radius: 2px;
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeRight 0.5s ease forwards;
+  }
+
+  .tl-item:nth-child(1) { animation-delay: 0.05s; }
+  .tl-item:nth-child(2) { animation-delay: 0.10s; }
+  .tl-item:nth-child(3) { animation-delay: 0.15s; }
+  .tl-item:nth-child(4) { animation-delay: 0.20s; }
+  .tl-item:nth-child(5) { animation-delay: 0.25s; }
+  .tl-item:nth-child(6) { animation-delay: 0.30s; }
+  .tl-item:nth-child(7) { animation-delay: 0.35s; }
+  .tl-item:nth-child(8) { animation-delay: 0.40s; }
+
+  .tl-dot {
+    position: absolute;
+    left: -54px;
+    top: 16px;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 2px var(--terracotta);
+    z-index: 1;
+  }
+
+  .tl-item.highlight .tl-dot {
+    background: var(--gold);
+    box-shadow: 0 0 0 2px var(--gold), 0 0 12px rgba(212,168,83,0.5);
+    width: 14px; height: 14px;
+    left: -56px;
+    top: 14px;
+  }
+
+  .tl-item.food .tl-dot { background: var(--teal); box-shadow: 0 0 0 2px var(--teal); }
+  .tl-item.travel .tl-dot { background: var(--sage); box-shadow: 0 0 0 2px var(--sage); }
+
+  .tl-time {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    font-family: 'Sarabun', sans-serif;
+  }
+
+  .tl-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 15px 18px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .tl-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  }
+
+  .tl-item.highlight .tl-card {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #fffbf0, #fff8e5);
+    box-shadow: 0 4px 20px rgba(212,168,83,0.18);
+  }
+
+  .tl-item.food .tl-card { border-left: 3px solid var(--teal); }
+  .tl-item.travel .tl-card { border-left: 3px solid var(--sage); }
+
+  .tl-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .tl-icon { font-size: 19px; flex-shrink: 0; margin-top: 1px; }
+  .tl-main { font-size: 15px; font-weight: 600; color: var(--deep); line-height: 1.35; }
+  .tl-sub { font-size: 13.5px; color: var(--muted); margin-top: 5px; line-height: 1.65; }
+
+  .tl-tag {
+    display: inline-block;
+    background: rgba(201,96,58,0.1);
+    color: var(--terracotta);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 5px;
+    margin-top: 7px;
+    letter-spacing: 0.3px;
+  }
+  .tl-item.food .tl-tag { background: rgba(42,124,124,0.1); color: var(--teal); }
+  .tl-item.travel .tl-tag { background: rgba(122,154,122,0.12); color: var(--sage); }
+  .tl-item.highlight .tl-tag { background: rgba(212,168,83,0.2); color: #9a6e1a; }
+
+  /* ── TRANSPORT ── */
+  .transport-section { padding: 72px 0; background: var(--sand); }
+
+  .transport-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px; font-weight: 700;
+    color: var(--deep); margin-bottom: 8px;
+  }
+  .transport-sub { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+
+  .transport-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .transport-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 26px;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .transport-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+  }
+  .transport-card .tc-icon { font-size: 30px; margin-bottom: 14px; }
+  .transport-card .tc-title { font-weight: 700; font-size: 16px; color: var(--deep); margin-bottom: 8px; }
+  .transport-card .tc-body { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .transport-card .tc-tag {
+    display: inline-block;
+    margin-top: 14px;
+    background: var(--terracotta);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── TIPS SECTION ── */
+  .tips-section {
+    background: var(--deep);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tips-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201,96,58,0.25) 0%, transparent 70%);
+  }
+
+  .tips-section .container { position: relative; }
+
+  .tips-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .tips-sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 40px; }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .tip-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .tip-card:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-2px);
+  }
+
+  .tip-emoji { font-size: 32px; margin-bottom: 14px; }
+  .tip-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+  .tip-list { list-style: none; }
+  .tip-list li {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 10px;
+    line-height: 1.55;
+  }
+  .tip-list li:last-child { border-bottom: none; }
+  .tip-list li::before { content: '→'; color: var(--terracotta-light); flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    padding: 52px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  footer p { font-size: 13px; color: rgba(255,255,255,0.3); line-height: 2.2; }
+  footer strong { color: var(--gold-light); }
+
+  /* ── WAVE DIVIDER ── */
+  .wave-divider { overflow: hidden; line-height: 0; }
+  .wave-divider svg { display: block; width: 100%; }
+
+  /* ── KEYFRAMES ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeRight {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .overview-item { flex: 1 1 45%; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .overview-item:nth-last-child(1):nth-child(odd) { flex: 1 1 100%; }
+
+    .timeline { padding-left: 52px; }
+    .timeline::before { left: 16px; }
+    .tl-dot { left: -38px; }
+    .tl-item.highlight .tl-dot { left: -40px; }
+    .tl-card { padding: 13px 15px; }
+
+    .day-panel-num { font-size: 40px; }
+    .day-title { font-size: 18px; }
+    .days-section { padding: 28px 0 40px; }
+
+    .tab-btn { padding: 8px 6px 12px; }
+    .tab-day-num { font-size: 18px; }
+    .tab-day-label { font-size: 11px; }
+
+    .tips-grid, .transport-cards { grid-template-columns: 1fr; }
+    .transport-title, .tips-title { font-size: 28px; }
+  }
+
+  @media (max-width: 400px) {
+    .overview-item { flex: 1 1 100%; border-right: none; }
+    .tab-day-date { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-badge">Trip Plan · 4 วัน 3 คืน</div>
+  <h1>เวียดนาม<br><em>กลาง</em></h1>
+  <p class="hero-subtitle">ดานัง · บานาฮิลล์ · ฮอยอัน</p>
+  <div class="hero-dates">
+    <span class="date-pill">📅 22–25 พฤษภาคม 2569</span>
+    <span class="date-pill">✈️ สุวรรณภูมิ → ดานัง</span>
+  </div>
+  <div class="hero-scroll">
+    <span>เลื่อนดู</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-item">
+        <span class="ov-icon">🌴</span>
+        <div><div class="ov-val">4 วัน · 3 คืน</div><div class="ov-label">ระยะเวลาเดินทาง</div></div>
+      </div>
+      <div class="overview-item">
+        <span class="ov-icon">🏨</span>
+        <div><div class="ov-val">3 โรงแรม</div><div class="ov-label">HAIAN · Mercure · Hoianan</div></div>
+      </div>
+      <div class="overview-item">
+        <span class="ov-icon">🗺️</span>
+        <div><div class="ov-val">3 เมือง</div><div class="ov-label">ดานัง · บานาฮิลล์ · ฮอยอัน</div></div>
+      </div>
+      <div class="overview-item">
+        <span class="ov-icon">🍜</span>
+        <div><div class="ov-val">6 มื้อ</div><div class="ov-label">ร้านอร่อยคัดสรร</div></div>
+      </div>
+      <div class="overview-item">
+        <span class="ov-icon">⭐</span>
+        <div><div class="ov-val">Highlight</div><div class="ov-label">Golden Bridge & โคมไฟ</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DAYS SECTION -->
+<section class="days-section">
+  <div class="container">
+
+    <!-- TAB NAV -->
+    <div class="tabs-wrapper">
+      <nav class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab(1, this)">
+          <span class="tab-day-num">01</span>
+          <span class="tab-day-label">ดานัง</span>
+          <span class="tab-day-date">ศุกร์ 22 พ.ค.</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab(2, this)">
+          <span class="tab-day-num">02</span>
+          <span class="tab-day-label">บานาฮิลล์</span>
+          <span class="tab-day-date">เสาร์ 23 พ.ค.</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab(3, this)">
+          <span class="tab-day-num">03</span>
+          <span class="tab-day-label">ฮอยอัน</span>
+          <span class="tab-day-date">อาทิตย์ 24 พ.ค.</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab(4, this)">
+          <span class="tab-day-num">04</span>
+          <span class="tab-day-label">กลับบ้าน</span>
+          <span class="tab-day-date">จันทร์ 25 พ.ค.</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day-panel active" id="day-1">
+      <div class="day-panel-header">
+        <div class="day-panel-num">01</div>
+        <div class="day-info">
+          <div class="day-title">พักผ่อนหรูริมหาดดานัง</div>
+          <div class="day-date">ศุกร์ที่ 22 พฤษภาคม 2569</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item travel">
+          <div class="tl-dot"></div>
+          <div class="tl-time">08:10</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">✈️</span>
+              <div class="tl-main">ออกเดินทางจากสุวรรณภูมิ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item travel">
+          <div class="tl-dot"></div>
+          <div class="tl-time">10:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🛬</span>
+              <div class="tl-main">ถึงสนามบินดานัง</div>
+            </div>
+            <div class="tl-sub">แนะนำใช้บัตร YouTrip ผูกกับแอป Grab แล้วเรียกรถไปโรงแรม</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">11:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🏨</span>
+              <div class="tl-main">HAIAN Beach Hotel & Spa</div>
+            </div>
+            <div class="tl-sub">ฝากกระเป๋า และแจ้งจองคิว Afternoon Tea ล่วงหน้า</div>
+            <span class="tl-tag">เช็กอินภายหลัง</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">12:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🍽️</span>
+              <div class="tl-main">Bếp Cuốn Đà Nẵng</div>
+            </div>
+            <div class="tl-sub">อาหารพื้นเมืองเวียดนาม ตกแต่งสวย รสชาติดี</div>
+            <span class="tl-tag">มื้อเที่ยง</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">14:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🫖</span>
+              <div class="tl-main">เช็กอิน + Afternoon Tea</div>
+            </div>
+            <div class="tl-sub">ถ่ายรูปที่สระว่ายน้ำ Rooftop สุดวิว</div>
+            <span class="tl-tag">ไฮไลต์โรงแรม</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">16:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🛕</span>
+              <div class="tl-main">วัด Linh Ung</div>
+            </div>
+            <div class="tl-sub">ชมเจ้าแม่กวนอิมและวิวอ่าวที่สวยงาม (นั่ง Grab ไป)</div>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">18:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🦞</span>
+              <div class="tl-main">Mộc Quán</div>
+            </div>
+            <div class="tl-sub">ร้านยอดฮิตของคนไทย กุ้งมังกรซอสไข่เค็มเด็ดมาก</div>
+            <span class="tl-tag">มื้อค่ำ</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">20:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🐉</span>
+              <div class="tl-main">สะพานมังกร (Dragon Bridge)</div>
+            </div>
+            <div class="tl-sub">เดินเล่นถ่ายรูปยามค่ำคืน</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-panel" id="day-2">
+      <div class="day-panel-header">
+        <div class="day-panel-num">02</div>
+        <div class="day-info">
+          <div class="day-title">พิชิตบานาฮิลล์</div>
+          <div class="day-date">เสาร์ที่ 23 พฤษภาคม 2569</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">08:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🍳</span>
+              <div class="tl-main">มื้อเช้า + เช็กเอาต์จาก HAIAN</div>
+            </div>
+            <span class="tl-tag">มื้อเช้า</span>
+          </div>
+        </div>
+
+        <div class="tl-item travel">
+          <div class="tl-dot"></div>
+          <div class="tl-time">09:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🚗</span>
+              <div class="tl-main">นั่ง Grab ไป Ba Na Hills</div>
+            </div>
+            <div class="tl-sub">ใช้เวลาเดินทางประมาณ 45 นาที</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">10:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🏔️</span>
+              <div class="tl-main">เช็กอิน Mercure Danang</div>
+            </div>
+            <div class="tl-sub">ฝากกระเป๋า + ซื้อตั๋วกระเช้าราคาพิเศษในฐานะแขกโรงแรม</div>
+            <span class="tl-tag">สิทธิ์พิเศษ</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">11:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🚡</span>
+              <div class="tl-main">ขึ้นกระเช้าสู่ยอดเขา</div>
+            </div>
+            <div class="tl-sub">สนุกกับเครื่องเล่นใน Fantasy Park ทั้งวัน</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">15:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🛏️</span>
+              <div class="tl-main">เช็กอินเข้าห้องพัก</div>
+            </div>
+            <div class="tl-sub">พักผ่อนชมบรรยากาศสไตล์ยุโรปบนยอดเขา</div>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">18:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🥗</span>
+              <div class="tl-main">บุฟเฟต์โรงแรม หรือหมู่บ้านฝรั่งเศส</div>
+            </div>
+            <div class="tl-sub">บรรยากาศกลางคืนในหมู่บ้านฝรั่งเศสสวยมากที่สุด</div>
+            <span class="tl-tag">มื้อค่ำ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-panel" id="day-3">
+      <div class="day-panel-header">
+        <div class="day-panel-num">03</div>
+        <div class="day-info">
+          <div class="day-title">สะพานมือยามเช้า & มนต์เสน่ห์ฮอยอัน</div>
+          <div class="day-date">อาทิตย์ที่ 24 พฤษภาคม 2569</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item highlight">
+          <div class="tl-dot"></div>
+          <div class="tl-time">06:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">✨</span>
+              <div class="tl-main">Golden Bridge (สะพานมือ)</div>
+            </div>
+            <div class="tl-sub">ตื่นเช้าไปถ่ายรูปเป็นกลุ่มแรก แสงสวยที่สุด ไม่มีคนรบกวน</div>
+            <span class="tl-tag">⭐ ไฮไลต์ทริป</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">09:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🥐</span>
+              <div class="tl-main">มื้อเช้า + พักผ่อน</div>
+            </div>
+            <div class="tl-sub">หรือแช่จากุซซี่ในโรงแรมชมวิวหมอก</div>
+            <span class="tl-tag">มื้อเช้า</span>
+          </div>
+        </div>
+
+        <div class="tl-item travel">
+          <div class="tl-dot"></div>
+          <div class="tl-time">11:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🚡</span>
+              <div class="tl-main">กระเช้าลง → Grab ไปฮอยอัน</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">12:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🏨</span>
+              <div class="tl-main">เช็กอิน Hoianan Boutique Hotel</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">13:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🍚</span>
+              <div class="tl-main">Com Ga Ba Buoi</div>
+            </div>
+            <div class="tl-sub">ข้าวมันไก่ฮอยอันชื่อดัง ต้องลอง!</div>
+            <span class="tl-tag">มื้อเที่ยง</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">15:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🛶</span>
+              <div class="tl-main">ล่องเรือกระด้ง (Cam Thanh)</div>
+            </div>
+            <div class="tl-sub">กิจกรรมสนุกท่ามกลางป่าจาก บรรยากาศเป็นเอกลักษณ์</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">17:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">☕</span>
+              <div class="tl-main">Faifo Coffee + เมืองเก่าฮอยอัน</div>
+            </div>
+            <div class="tl-sub">ขึ้นไปดาดฟ้าถ่ายรูปมุมยอดฮิต เดินเล่นชมโคมไฟยามเย็น</div>
+          </div>
+        </div>
+
+        <div class="tl-item highlight">
+          <div class="tl-dot"></div>
+          <div class="tl-time">19:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🏮</span>
+              <div class="tl-main">ล่องเรือลอยโคมไฟ + ตลาดกลางคืน</div>
+            </div>
+            <div class="tl-sub">ทานมื้อค่ำที่ตลาดกลางคืนริมน้ำ บรรยากาศโรแมนติกมาก</div>
+            <span class="tl-tag">⭐ ไฮไลต์ทริป</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-panel" id="day-4">
+      <div class="day-panel-header">
+        <div class="day-panel-num">04</div>
+        <div class="day-info">
+          <div class="day-title">ช้อปของฝาก เดินทางกลับ</div>
+          <div class="day-date">จันทร์ที่ 25 พฤษภาคม 2569</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item food">
+          <div class="tl-dot"></div>
+          <div class="tl-time">07:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🌅</span>
+              <div class="tl-main">มื้อเช้า + เดินเมืองเก่ายามเช้า</div>
+            </div>
+            <div class="tl-sub">ช่วงเช้าคนน้อย เดินเล่นถ่ายรูปได้สบาย</div>
+            <span class="tl-tag">มื้อเช้า</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">09:30</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🧳</span>
+              <div class="tl-main">เช็กเอาต์ + เดินทางสู่ดานัง</div>
+            </div>
+            <div class="tl-sub">ให้โรงแรมจัดรถรับส่งสนามบิน (45–60 นาที) จองล่วงหน้าก่อน</div>
+            <span class="tl-tag">จองรถล่วงหน้า</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">11:00</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">🏢</span>
+              <div class="tl-main">ถึงสนามบินดานัง</div>
+            </div>
+            <div class="tl-sub">เช็กอิน ช้อปของฝาก ทานมื้อสุดท้ายในเวียดนาม</div>
+          </div>
+        </div>
+
+        <div class="tl-item travel">
+          <div class="tl-dot"></div>
+          <div class="tl-time">13:15</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-icon">✈️</span>
+              <div class="tl-main">ออกเดินทางกลับกรุงเทพฯ</div>
+            </div>
+            <div class="tl-sub">พบกันทริปหน้า! 👋</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</section>
+
+<!-- TRANSPORT -->
+<section class="transport-section">
+  <div class="container">
+    <div class="section-label">การเดินทาง</div>
+    <div class="transport-title">ขนส่งที่แนะนำ</div>
+    <p class="transport-sub">สะดวก ราคาชัดเจน ไม่ต้องต่อรอง</p>
+    <div class="transport-cards">
+      <div class="transport-card">
+        <div class="tc-icon">🚗</div>
+        <div class="tc-title">ภายในเมือง → Grab</div>
+        <div class="tc-body">ใช้เป็นหลักตลอดทริป สะดวก ราคาแสดงล่วงหน้า ผูกบัตร YouTrip ได้เลย ไม่ต้องจัดการเงินสด</div>
+        <span class="tc-tag">แนะนำ ⭐</span>
+      </div>
+      <div class="transport-card">
+        <div class="tc-icon">🚌</div>
+        <div class="tc-title">ระหว่างเมือง → Grab / Klook</div>
+        <div class="tc-body">ดานัง–บานาฮิลล์–ฮอยอัน ใช้ Grab ได้ หรือจอง Private Transfer ผ่าน Klook เพื่อราคาเหมาแน่นอน</div>
+        <span class="tc-tag">ยืดหยุ่น</span>
+      </div>
+      <div class="transport-card">
+        <div class="tc-icon">💡</div>
+        <div class="tc-title">เทคนิค: เจรจากับคนขับ</div>
+        <div class="tc-body">ถ้าเจอคนขับ Grab บริการดี ลองคุยให้มารับในวันถัดไปได้เลย มักได้ราคาดีกว่าจองใหม่</div>
+        <span class="tc-tag">Pro tip</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="tips-section">
+  <div class="container">
+    <div class="section-label" style="color: var(--gold-light);">
+      <span style="background: var(--gold-light); height:1px; width:24px; display:block;"></span>
+      สิ่งที่ต้องเตรียม
+      <span style="background: var(--gold-light); height:1px; width:24px; display:block;"></span>
+    </div>
+    <div class="tips-title">Checklist ก่อนออกเดินทาง</div>
+    <p class="tips-sub">เช็กให้ครบ เดินทางได้อย่างไร้กังวล</p>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-emoji">📧</div>
+        <div class="tip-heading">อีเมลแจ้งโรงแรม</div>
+        <ul class="tip-list">
+          <li><strong style="color:rgba(255,255,255,0.85)">HAIAN</strong> — แจ้งเวลาถึง 10:30 น. ขอฝากกระเป๋า + จอง Afternoon Tea</li>
+          <li><strong style="color:rgba(255,255,255,0.85)">Mercure</strong> — แจ้งเข้าพักเพื่อจองสิทธิ์ตั๋วกระเช้าราคาพิเศษ + ขอห้องวิวสวย</li>
+          <li><strong style="color:rgba(255,255,255,0.85)">Hoianan</strong> — จองรถรับส่งสนามบิน 25 พ.ค. เวลา 10:00 น.</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-emoji">📄</div>
+        <div class="tip-heading">เอกสาร</div>
+        <ul class="tip-list">
+          <li>พิมพ์ใบจองโรงแรม (Agoda/Trip.com) เก็บไว้เผื่อเน็ตมีปัญหา</li>
+          <li>พิมพ์ตั๋วเครื่องบินสำรองไว้</li>
+          <li>ประกันการเดินทาง ราคาไม่กี่ร้อย คุ้มมาก</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-emoji">💰</div>
+        <div class="tip-heading">การเงิน</div>
+        <ul class="tip-list">
+          <li>แลกเงินดอง (VND) บ้างเล็กน้อยสำหรับรถเข็นและทิป</li>
+          <li>เติมเงิน YouTrip ให้พร้อม ใช้กับ Grab และร้านที่รับบัตร</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-emoji">📱</div>
+        <div class="tip-heading">แอปที่ต้องมี</div>
+        <ul class="tip-list">
+          <li>Grab — เรียกรถทั้งทริป</li>
+          <li>Google Translate — แปลเมนูอาหาร คุยกับพนักงาน</li>
+          <li>YouTrip — จ่ายเงินสกุลต่างประเทศ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>🌏 <strong>เวียดนามกลาง · 22–25 พฤษภาคม 2569</strong></p>
+    <p>ดานัง · บานาฮิลล์ · ฮอยอัน · 4 วัน 3 คืน</p>
+    <p style="margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.2);">Have a great trip! 🛫</p>
+  </div>
+</footer>
+
+<script>
+  function switchTab(dayNum, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.day-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('day-' + dayNum).classList.add('active');
+    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+</script>
+
+</body>
+</html>
